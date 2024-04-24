@@ -26,6 +26,7 @@ app.post("/hdfcWebhook", async (req, res) => {
             userId: req.body.user_identifier
         }
       }) || ""
+      // @ts-ignore 
       if(user.status == "Success"){
         return res.json({
             message: "Already successed"
